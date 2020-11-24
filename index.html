@@ -13,25 +13,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Téglalap területe,kerülete</title>
+    <title>Cigis feladat</title>
 </head>
 <body>
-        <h1 id="cim">Téglalap területe,kerülete</h1>
-        Cigik száma, amit elszívsz egy nap:
-        <input type="text" class="form-control" id="szam1">
-        <br>
-        Dobozban hány cigi van:
-        <input type="text" class="form-control" id="szam2">
-        <br>
-        Doboz ára:
-        <input type="text" class="form-control" id="szam3">
-        <br>
-        <button class="btn btn-primary" onclick="kerulet()">Kerület számítás</button>
-        <button class="btn btn-danger" onclick="terulet()">Terület Számítás</button>
-        <br>
-        <span id="kimenet"></span>
-        <br>
-        <span id="kimenet2"></span>
 
+    <div class="row">
+        <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h1 id="cim">Cigis feladat 1 hétre</h1>
+                Cigik száma, amit elszívsz egy nap:
+                <input type="text" class="form-control" id="cigidb">
+                <br>
+                Dobozban hány cigi van:
+                <input type="text" class="form-control" id="cigidoboz">
+                <br>
+                Doboz ára:
+                <input type="text" class="form-control" id="cigiar">
+                <br>
+                <button class="btn btn-primary" onclick="szamol()">Számol</button>
+                <br>
+                <span id="koltseg"></span>
+            </div>
+        <div class="col-sm-4"></div>
+    </div>
 </body>
 </html>

@@ -1,27 +1,15 @@
-function kerulet()
+function szamol()
 {
-    var szam1 = document.getElementById("szam1").value;
-    var szam2 = document.getElementById("szam2").value;
-    var osszeg =2*(parseInt(szam1) +parseInt(szam2));
-    if (isNaN(parseInt(osszeg))) {
-        document.getElementById("kimenet").innerHTML = "Kerület: Hibás érték!!!";
+    var cigidb=document.getElementById("cigidb").value;
+    var cigidoboz=document.getElementById("cigidoboz").value;
+    var cigiar=document.getElementById("cigiar").value;
+    var osszeg = (cigidb*7)/cigidoboz*cigiar
+    if (isNaN(osszeg)){
+        document.getElementById('koltseg').innerHTML = "Formátum Hiba!";   
     }
     else
     {
-    document.getElementById("kimenet").innerHTML = "Kerület: "+osszeg+" cm";
+        document.getElementById('koltseg').innerHTML = osszeg+" ft";
     }
-}
 
-function terulet()
-{
-    var szam1 = document.getElementById("szam1").value;
-    var szam2 = document.getElementById("szam2").value;
-    var osszeg =(parseInt(szam1) * parseInt(szam2));
-    if (isNaN(parseInt(osszeg))) {
-        document.getElementById("kimenet2").innerHTML = "Terület: Hibás érték!!!";
-    }
-    else
-    {
-    document.getElementById("kimenet2").innerHTML = "Terület: "+osszeg+" cm<sup>2</sup>";
-    }
 }

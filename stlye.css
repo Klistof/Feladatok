@@ -6,28 +6,29 @@ body {
     background-image: url("hatter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 
-#szam1 {
+#cigidb {
     width: 250px;
     position: relative;
 }
 
-#szam2 {
+#cigidoboz {
     width: 250px;
     position: relative;
 }
-#szam3 {
+#cigiar {
     width: 250px;
     position: relative;
 }
 
-#kimenet {
+#koltseg {
     font-weight: bold;
-    color: #0fb0fb;
+    color:white;
 }
 
-#kimenet2 {
-    font-weight: bold;
-    color: #0fb0fb;
+.col-sm-4 {
+
+    color:white;
 }
