@@ -1,0 +1,33 @@
+#cim {
+    text-align: center;
+}
+
+body {
+    background-image: url("hatter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#szam1 {
+    width: 250px;
+    position: relative;
+}
+
+#szam2 {
+    width: 250px;
+    position: relative;
+}
+#szam3 {
+    width: 250px;
+    position: relative;
+}
+
+#kimenet {
+    font-weight: bold;
+    color: #0fb0fb;
+}
+
+#kimenet2 {
+    font-weight: bold;
+    color: #0fb0fb;
+}
