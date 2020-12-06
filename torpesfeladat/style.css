@@ -1,0 +1,22 @@
+#cim {
+    text-align: center;
+}
+
+body {
+    background-image: url("hatter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#szoveghelye
+{
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.col-sm-4 {
+text-align: center;
+color:white;
+}
