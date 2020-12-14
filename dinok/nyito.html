@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="sajat.css">
+</head>
+<body>
+    <img id="header" src="backgrounds/johatter.png" alt="">
+
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="text-align: center;">
+
+            <h1>Dinoszauruszok</h1>
+            <select id="dinok"  class="form-control" onchange="megjelenites()"      >
+                <option value="0" selected>Allosaurus</option>
+                <option value="1">Ankylosaurus</option>
+                <option value="2">Brachiosaurus</option>
+                <option value="3">Coelurosauria</option>   
+                <option value="4">Compsognathidae</option>                
+
+              </select>
+                <br>
+              <span id="dinonev"></span>
+            <br>
+              <img src="" id="dinokep" style="width: 300px;">
+            <br>
+              <div id="dinoleiras"></div>
+            
+              <br>
+
+              <table id="tablazat">
+                <tr>
+                  <td>
+                    <span id="cim">Alrend</span><br>
+                  </td>
+                </tr>
+                <tr>
+
+              <td>
+                <span id="content"></span><br>
+              </td>
+            </tr>
+              
+            <tr>
+              <td>
+                <span id="cim">Csontvázát</span><br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="" id="csontvaz" style="width: 300px;">
+              </td>
+              </tr>
+            </table>
+
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+
+  <script>
+
+    var tomb= ["Allosaurus", "Ankylosaurus", "Brachiosaurus","Coelurosauria","Compsognathidae"];
+    var leiras= [];
+    leiras.push("Az Allosaurus (jelentése 'különös gyík', az ógörög αλλος / allosz 'furcsa', 'eltérő' és σαυρος / szaürosz 'gyík' szavak összetételéből)[1] a nagy theropoda dinoszauruszok egy neme. Fajai főként a jura időszakban, mintegy 155-150 millió évvel ezelőtt éltek a mai Észak-Amerikában. Az első, egyértelműen ehhez a nemhez tartozó maradványokat Othniel Charles Marsh írta le 1877-ben. Mivel ez az első jól ismert theropoda dinoszaurusz, nem csak az őslénykutatók figyeltek fel rá, de több játék- illetve dokumentumfilm is foglalkozott vele.");
+    leiras.push("Az Ankylosaurus (jelentése 'összeforrt gyík') az ankylosaurida dinoszauruszok egyik neme, melynek fosszíliái az Észak-Amerika nyugati részén levő kréta időszaki geológiai formációkból kerültek elő. Egy faja ismert, az A. magniventris.Bár a teljes csontvázát nem találták meg, és több más dinoszaurusz sokkal nagyobb leletanyag alapján ismert, mégis gyakran az Ankylosaurust tekintik a páncélozott dinoszauruszok archetípusának. Jól ismert tulajdonságai, például a nehéz páncélzatú test és a súlyos farokbuzogány a többi ankylosauridánál is megtalálhatók, de az Ankylosaurus a család legnagyobb tagja.");
+    leiras.push("A Brachiosaurus (jelentése 'kargyík', az ógörög βραχιων / brakhión 'kar' és σαυρος / szaürosz 'gyík' szavak összetételéből) a sauropoda dinoszauruszok egyik neme, amely a késő jura korban és feltehetően a kora kréta korban élt. Nevét a hátsóknál hosszabb mellső lábai után kapta. A Földön valaha járt legnagyobb állatok egyike volt, amely egyben az egyik leghíresebb dinoszaurusszá is vált, főként a Giraffatitan brancai által, melyet eredetileg a Brachiosaurus egyik fajaként neveztek el (B. brancai néven).");
+    leiras.push("A Coelurosauria egy klád, ami valamennyi olyan theropoda dinoszauruszt tartalmazza, amely közelebb áll a madarakhoz, mint a carnosaurusokhoz. Ebbe a változatos csoportba tartoznak a tyrannosauroideák, az ornithomimosaurusok, és a maniraptorák; a Maniraptora alcsoport tagjai a madarak is, melyek a coelurosaurusok egyetlen ma élő leszármazottai. Az ezidáig felfedezett tollas dinoszauruszok is a coelurosaurusok közé tartoznak; egyes tudósok úgy gondolják, hogy a csoport legtöbb tagja tollakkal rendelkezett.");
+    leiras.push("A Compsognathidae családba kis termetű (0,7-2,4 m hosszú), gyors mozgású ragadozó dinoszauruszok tartoztak. Maradványaik Európa, Ázsia és Dél-Amerika késő jura- és kora krétakori rétegeiből ismertek. Pontos rendszertani helyük bizonytalan, de általában a Coelurosauria klád primitív tagjainak tekintik őket. A család több tagjánál a megkövesedett csontokon kívül tollak illetve pikkelyek lenyomatai is fennmaradtak, ezért leleteik nagy jelentőségűek a tollak evolúciójának megismerésében.");
+
+    var alrend=[];
+    alrend.push("Theropoda");
+    alrend.push("Thyreophora");
+    alrend.push("Sauropodomorpha");
+    alrend.push("Theropoda");
+    alrend.push("Theropoda");
+
+    megjelenites();
+
+    function megjelenites()
+    {
+        var szam=dinok.value;
+        dinonev.innerHTML= tomb[szam] ;
+        dinokep.src="dinok/"+tomb[szam]+".gif";
+        dinoleiras.innerHTML=leiras[szam];
+
+        content.innerHTML=alrend[szam]+"<br>";
+        csontvaz.src="csontvaz/"+tomb[szam]+".jpg";
+        //document.getElementById("dinoleiras").innerHTML=leiras[szam];
+    }     
+
+  </script>
+
+</body>
+</html>

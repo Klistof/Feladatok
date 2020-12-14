@@ -1,0 +1,47 @@
+body{
+    background-image: url("backgrounds/johatter2.png");
+    background-size: 100%;
+}
+
+#dinonev
+{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+#dinokep
+{
+    margin-top: 20px;
+    margin-bottom: 20px;   
+    box-shadow: 5px 10px rgb(98, 211, 98);
+}
+#dinoleiras
+{
+    border:1px solid black;
+}
+
+#cim {
+    font-size: larger;
+    font-weight: bold;
+    color:cadetblue;
+}
+
+#content {
+    font-weight: bold;
+
+}
+
+#tablazat {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#csontvaz{
+
+    margin-top: 20px;
+    margin-bottom: 20px;   
+    box-shadow: 5px 10px rgb(98, 211, 98);
+
+}
