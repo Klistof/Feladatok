@@ -53,11 +53,12 @@ h2 {
 
 #content {
     float: right;
-    margin-top: 140px; 
+    margin-top: 5%;
+    margin-bottom: 5%; 
     padding-top: 20px;
     padding-left:10px;
     margin-right: 100px;
-    width: 40%;
+    width: 45%;
     height: 20%;
     font-family: 'Press Start 2P', cursive;
     color:white;
@@ -73,7 +74,8 @@ ul {
 
 #software {
     float: left;
-    margin-top: 140px; 
+    margin-top: 5%; 
+    margin-bottom: 10%;
     margin-left: 100px;
     width: 40%;
     height: 20%;
@@ -91,7 +93,7 @@ td {
 }
 
 #content2 {
-    margin-top: 400px;
+    margin-top: 30%;
     text-align: center;
 }
 .col-sm-6 {
@@ -108,11 +110,4 @@ td {
 #facebook {
     color: #0984e3;
     font-size: 150px;
-}
-
-#line {
-    height:3px;
-    width:70%;
-    color:#b2bec3;
-    background-color:#b2bec3;
 }
