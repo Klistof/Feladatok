@@ -20,7 +20,6 @@ function showCurrentCountry(newValue){
 	} else {
 	var code = element.value;
 	}
-    console.log(code);
 
 	fetch("https://api.covid19api.com/total/dayone/country/"+code, {
 	"method": "GET",
@@ -67,7 +66,8 @@ $( document ).ready(function() {
             {
                 var option = document.createElement("option");
                 option.text = countries[i].Country;
-                option.value = countries[i].Slug;
+                option.value = countries[i].ISO2;
+                //option.value = countries[i].Slug;
                     if (countries[i].Country == "Hungary"){
                         option.selected = "selected";
 						showCurrentCountry("hungary")
