@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/covid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js" integrity="sha512-xlGek7L5p0odaCy8lkU1WpUJLuoxjuLDaiGpYrHJhp1YUNaA4x+c3PYvEIInH5clr0uHFucar2bhUR0Ef4R0ww==" crossorigin="anonymous"></script>
+    <script src="js/covid.js"></script>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" id="navLabels" href="#"><img id="mylogo" src ="img/logo.png"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" id="navLabels" href="index.html"><i class="fas fa-home"></i> Kezdőlap </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navLabels" href="myworks.html"><i class="fas fa-briefcase"></i> Munkáim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="navLabelsActive" href="covid.html"><i class="fas fa-briefcase"></i> Koronavirus<span class="sr-only">(current)</span></a>
+              </li>
+          </ul>
+        </div>
+     </nav>
+
+    <div id="stats">
+        <section id="circleBar">
+          <h1 style="text-align: center; font-size: 20px;">Koronavirus <br> Az összes adat</h1>
+          
+          <div class = "container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="round" id="death" data-value="100" data-size = "200" data-thickness="12">
+                  <strong><i class="fas fa-skull-crossbones"></i></strong>
+                  <strong id=placeholder></strong>
+                  <span>
+                  Elhunytak
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="round" id="recovered" data-value="100" data-size = "200" data-thickness="12">
+                  <strong><i class="fas fa-shield-alt"></i></strong>
+                  <strong id=placeholder></strong>
+                  <span>
+                  Felépült
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="round" id="infected" data-value="100" data-size = "200" data-thickness="12">
+                  <strong><i class="fas fa-head-side-mask"></i></strong>
+                  <strong id=placeholder></strong>
+                  <span>
+                  Fertőzőtt
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="round" id="active" data-value="100" data-size = "200" data-thickness="12">
+                  <strong><i class="fas fa-bug"></i></strong>
+                  <strong id=placeholder></strong>
+                  <span>
+                  Aktív
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <select id="countries" onchange="showCurrentCountry()"></select> <br>
+          <strong id="update"></strong>
+        </section>
+
+    </div>
+
+
+</body>
+</html>

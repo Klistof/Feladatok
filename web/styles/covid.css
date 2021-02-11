@@ -1,0 +1,86 @@
+#circleBar {
+    margin-top: 180px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#circleBar .round{
+    min-height: 255px;
+    margin-top: 30px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#circleBar #placeholder {
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -50px;
+    transform: translate(-50%);
+    font-size: 30px;
+    color:#fff;
+    font-weight: 100;
+}
+
+#circleBar .round strong {
+    position: absolute;
+    top:30%;
+    left:50%;
+    margin-top: -50px;
+    transform: translate(-50%);
+    font-size: 30px;
+    color:#ffffff;
+    font-weight: 100;
+}
+
+
+#circleBar span{
+    display: block;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+#circleBar span i {
+    color:#ff5c5c;
+    font-size: 22px;
+    margin-right: 7px;
+}
+
+body {
+    background-color: #636e72;
+}
+
+h1{
+    color:white;
+    font-size: 50px;
+}
+
+#mylogo {
+    height: 70px;
+    border-image: url(logo.png) 40 round;
+    padding-right: 20px;
+}
+
+#navLabels {
+    color:white;
+    font-size: 15px;
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#navLabelsActive {
+    color:#7a46a6;
+    font-size: 15px;
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration:solid;
+}
+
+
+.nav-link:hover {
+    color: #7a46a6;
+    text-decoration: underline;
+}
