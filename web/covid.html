@@ -39,8 +39,11 @@
 
     <div id="stats">
         <section id="circleBar">
-          <h1 style="text-align: center; font-size: 30px;">Koronavirus <br> Az összes adat</h1>
-          
+          <h1 style="text-align: center; font-size: 30px;">Koronavirus</h1>
+          <strong style="text-align: center; font-size: 30px;" id="current"></strong>
+          <strong style="text-align: center; font-size: 35px;" id="update"></strong>
+
+          <hr>
           <div class = "container">
             <div class="row">
               <div class="col-md-3">
@@ -86,8 +89,12 @@
             </div>
           </div>
 
-          <select id="countries" onchange="showCurrentCountry()"></select> <br>
-          <strong id="update"></strong>
+          <hr>
+          <strong style="text-align: center; font-size: 15px;">Ország : </strong><select id="countries" style="text-align: center;width: 200px;" onchange="showCurrentCountry()"></select>
+          <strong style="text-align: center; font-size: 15px;">Adat : </strong> <select id="change" onchange="showCurrentCountry()">
+            <option value="true">Mai</option>
+            <option value="false" selected="selected">Összes</option>
+          </select>
         </section>
 
     </div>

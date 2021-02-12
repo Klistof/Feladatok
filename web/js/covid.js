@@ -1,20 +1,38 @@
-var igazolt = 0;
-var felepult = 0;
-var sulyos = 0;
-var halalok = 0;
+function calculateCurrent(jsonValue,current) {
+	if(current == "false"){
+        var count = -1;
+        for(i=0;i < jsonValue.length;i++) {
+            count++;
+        }
+        updateValues(jsonValue[count].Confirmed,jsonValue[count].Recovered,jsonValue[count].Active,jsonValue[count].Deaths,jsonValue[count].Date);
+    } else
+    {
+        var count = -1;
+        for(i=0;i < jsonValue.length;i++) {
+            count++;
+        }
+        var Confirmed = jsonValue[count].Confirmed-jsonValue[count-1].Confirmed;
+        var Recovered = jsonValue[count].Recovered-jsonValue[count-1].Recovered;
+        var Active = jsonValue[count].Active-jsonValue[count-1].Active;
+        var Deaths = jsonValue[count].Deaths-jsonValue[count-1].Deaths;
+        var Date = jsonValue[count].Date;  
 
-function calculateCurrent(jsonValue) {
-	var count = -1;
-	for(i=0;i < jsonValue.length;i++) {
-		count++;
-	}
-    updateValues(jsonValue[count].Confirmed,jsonValue[count].Recovered,jsonValue[count].Active,jsonValue[count].Deaths,jsonValue[count].Date);
+        updateValues(Confirmed,Recovered,Active,Deaths,Date);
+    }
 }
-
 
 
 function showCurrentCountry(newValue){
     var element = document.getElementById("countries");
+    var element2 = document.getElementById("change");
+    var mai = element2.value;
+    if(mai == "true")
+    {
+    document.getElementById('current').innerHTML = "Mai nap <br>";
+    } else {
+    document.getElementById('current').innerHTML = "Összesen <br>";    
+    }
+
 	if (newValue) {
 	var	code = newValue;
 	} else {
@@ -29,8 +47,7 @@ function showCurrentCountry(newValue){
 })
 .then((response) => response.json())
     .then((responseJSON) => {
-		calculateCurrent(responseJSON);
-        console.log(responseJSON);
+		calculateCurrent(responseJSON,mai);
     })
 	.catch(err => {
 		console.error(err);
